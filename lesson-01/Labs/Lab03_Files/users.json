@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Leanne Graham",
+        "address": {
+            "city": "Gwenborough",
+            "street": {
+                "name": "Herzel",
+                "number": "Apt. 556"
+            }
+        }
+    },
+    {
+        "name": "Ervin Howell",
+        "address": {
+            "city": "Wisokyburgh",
+            "street": {
+                "name": "Valerie Place",
+                "number": "Suite 879"
+            }
+        }
+    },
+    {
+        "name": "Clementine Bauch",
+        "address": {
+            "city": "McKenziehaven",
+            "street": {
+                "name": "Douglas Extension",
+                "number": "Suite 847"
+            }
+        }
+    },
+    {
+        "name": "Patricia Lebsack",
+        "address": {
+            "city": "South Elvis",
+            "street": {
+                "name": "Herzel",
+                "number": "Apt. 692"
+            }
+        }
+    },
+    {
+        "name": "Chelsey Dietrich",
+        "address": {
+            "city": "Roscoeview",
+            "street": {
+                "name": "Skiles Walks",
+                "number": "Suite 351"
+            }
+        }
+    },
+    {
+        "name": "Mrs. Dennis Schulist",
+        "address": {
+            "city": "South Elvis",
+            "street": {
+                "name": "Herzel",
+                "number": "Apt. 950"
+            }
+        }
+    }
+]
