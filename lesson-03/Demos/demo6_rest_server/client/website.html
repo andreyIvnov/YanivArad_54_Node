@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <button onclick="getData()">Get Data</button>
+
+    <script>
+      const PERSONS_URL = 'http://localhost:3000/persons';
+
+      async function getData() {
+        const resp = await fetch(PERSONS_URL);
+        const data = await resp.json();
+        console.log(data);
+      }
+    </script>
+  </body>
+</html>
