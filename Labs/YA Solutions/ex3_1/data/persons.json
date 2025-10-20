@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Avi",
+    "address": {
+      "city": "Netanya",
+      "street": {
+        "name": "Herzl",
+        "number": 20
+      }
+    }
+  },
+  {
+    "name": "Dana",
+    "address": {
+      "city": "Tel Aviv",
+      "street": {
+        "name": "Dizengoff",
+        "number": 113
+      }
+    }
+  },
+  {
+    "name": "David",
+    "address": {
+      "city": "Raanana",
+      "street": {
+        "name": "Herzl",
+        "number": 52
+      }
+    }
+  }
+]

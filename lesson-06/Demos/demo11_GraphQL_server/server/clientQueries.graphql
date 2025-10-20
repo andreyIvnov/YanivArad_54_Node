@@ -1,0 +1,32 @@
+query {
+  allPersons {
+    name
+    age
+  }
+}
+
+query GetPersonsOlderThan {
+  getPersonsOlderThan(age: 25) {
+    name
+    age
+  }
+}
+
+query GetPerson {
+  getPerson(id: 2) {
+    name
+    age
+  }
+}
+
+mutation CreatePerson {
+  createPerson(per: { id: 4, name: "John", age: 99 })
+}
+
+mutation UpdatePerson {
+  updatePerson(per: { id: 4, name: "Johnny" })
+}
+
+mutation DeletePerson {
+  deletePerson(id: 3)
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.IO</title>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h2>Socket.IO</h2>
+
+    <form id="form">
+      <input id="input" type="text" placeholder="Type a message..." />
+      <button type="submit">Send</button>
+    </form>
+
+    <ul id="messages"></ul>
+
+    <script>
+      // Connect to the server
+      // 'io()' connects to the server host
+      const socket = io('http://localhost:3000');
+
+      const form = document.getElementById('form');
+      const input = document.getElementById('input');
+      const messages = document.getElementById('messages');
+
+      // Send message to server
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (input.value) {
+          socket.emit('chat mesaage', input.value);
+          input.value = '';
+        }
+      });
+
+      // Listen for messages from server
+      socket.on('chat mesaagge', (msg) => {
+        const li = document.createElement('li');
+        li.textContent = msg;
+        messages.appendChild(li);
+      });
+
+      // Listen for private messages from server
+      socket.on('server reply', (msg) => {
+        console.log('Private:', msg);
+      });
+    </script>
+  </body>
+</html>
