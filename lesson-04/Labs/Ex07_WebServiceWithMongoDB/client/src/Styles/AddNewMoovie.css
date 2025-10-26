@@ -1,0 +1,139 @@
+.add-movie-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.input-group {
+  width: 100%;
+  position: relative;
+}
+
+.add-movie-input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.add-movie-input:focus {
+  background: white;
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+.add-movie-input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.add-movie-input:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.add-movie-btn {
+  background: linear-gradient(45deg, #2ed573, #20bf6b);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(46, 213, 115, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.add-movie-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(46, 213, 115, 0.6);
+  background: linear-gradient(45deg, #20bf6b, #1dd1a1);
+}
+
+.add-movie-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(46, 213, 115, 0.4);
+}
+
+.add-movie-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.form-title {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Input validation styles */
+.add-movie-input:invalid {
+  border: 2px solid #ff4757;
+  box-shadow: 0 0 10px rgba(255, 71, 87, 0.3);
+}
+
+.add-movie-input:valid {
+  border: 2px solid #2ed573;
+}
+
+/* Loading state */
+.add-movie-btn.loading {
+  background: linear-gradient(45deg, #ffa502, #ff6348);
+  cursor: wait;
+}
+
+.add-movie-btn.loading::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .add-movie-form {
+    max-width: 100%;
+    gap: 15px;
+  }
+  
+  .add-movie-input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .add-movie-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  
+  .form-title {
+    font-size: 1.3rem;
+  }
+}
